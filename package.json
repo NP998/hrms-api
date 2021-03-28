@@ -1,0 +1,33 @@
+{
+  "name": "hrms-api",
+  "version": "1.0.0",
+  "description": "api for HRMS",
+  "main": "index.js",
+  "scripts": {
+    "dev": "NODE_ENV=isDev nodemon -w src --exec \"babel-node src --presets @babel/preset-env\"",
+    "build": "babel src -s -D -d dist --presets @babel/preset-env",
+    "prod": "NODE_ENV=isProd pm2 start dist",
+    "prod-stop": "pm2 stop dist",
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Navin Patel",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-validator": "^6.10.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.6.5",
+    "mongoose": "^5.12.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.10",
+    "@babel/core": "^7.13.10",
+    "@babel/node": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "nodemon": "^2.0.7"
+  }
+}
